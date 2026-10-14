@@ -1,0 +1,41 @@
+GST RECONCILIATION REPORT - PURCHASE REGISTER vs GSTR-2B (May-2026)
+
+SECTION 1: TRANSACTION-WISE RECONCILIATION
+Invoice No,Vendor Name,GSTIN (PR),GSTIN (2B),Taxable Value (PR),Taxable Value (2B),GST Rate (PR),GST Rate (2B),CGST (PR),CGST (2B),SGST (PR),SGST (2B),Total Value (PR),Total Value (2B),Status,Remarks
+INV-1001,Sharma Enterprises,07AAACS1234F1Z5,07AAACS1234F1Z5,100000,100000,18%,18%,9000,9000,9000,9000,118000,118000,Matched,No discrepancy
+INV-1001 (Dup),Sharma Enterprises,07AAACS1234F1Z5,N/A,100000,N/A,18%,N/A,9000,N/A,9000,N/A,118000,N/A,Duplicate Entry,Invoice repeated in Purchase Register - risk of double ITC claim of INR 18000
+INV-1002,Kumar Traders,09AAACK5678G1Z3,09AAACK5678G1Z3,50000,50000,18%,18%,4500,4500,4500,4500,59000,59500,Mismatch - Total Value,2B total value differs by INR 500 from PR; CGST/SGST tally so no ITC impact - likely data entry error in 2B
+INV-1003,Patel Industries,24AAACP9012H1Z7,24AAACP9012H1Z7,75000,75000,12%,18%,4500,6750,4500,6750,84000,88500,Mismatch - GST Rate,Rate booked at 12% in PR but reflects 18% in 2B; ITC shortfall of INR 4500 if 2B is correct - confirm with vendor
+INV-1005,Singh & Co,27AABCS3456J1Z9,N/A,200000,N/A,18%,N/A,18000,N/A,18000,N/A,236000,N/A,Missing in 2B,Invoice not uploaded/filed by vendor - ITC of INR 36000 at risk until reflected in 2B
+INV-1006,Verma Logistics,06AABCV7890K1Z1,N/A,30000,N/A,5%,N/A,750,N/A,750,N/A,31500,N/A,Missing in 2B,Invoice not uploaded/filed by vendor - ITC of INR 1500 at risk until reflected in 2B
+INV-1007,Gupta Stationers,07AABCG2345L1Z4,07AABCG2345L1Z4,15000,15000,12%,12%,900,900,900,900,16800,16800,Matched,No discrepancy
+INV-1008,Reddy Tech Solutions,36AABCR6789M1Z6,36AABCR6789M1Z9,120000,120000,18%,18%,10800,10800,10800,10800,141600,141600,Mismatch - GSTIN,Vendor GSTIN differs in last character (M1Z6 vs M1Z9); amounts match but portal will treat as non-matched - vendor correction needed
+INV-1009,Sharma Enterprises,07AAACS1234F1Z5,07AAACS1234F1Z5,45000,45000,18%,18%,4050,4050,4050,4050,53100,53100,Matched,No discrepancy
+INV-1010,Iyer Consultants,33AABCI1234N1Z8,33AABCI1234N1Z8,60000,60000,18%,18%,5400,5400,5400,5400,70800,70800,Matched,No discrepancy
+INV-1011,Mehta Furniture,24AABCM5678O1Z2,24AABCM5678O1Z2,80000,80000,12%,12%,4800,4800,4800,4800,89600,89600,Matched,No discrepancy
+INV-1012,Kumar Traders,09AAACK5678G1Z3,09AAACK5678G1Z3,25000,25000,18%,18%,2250,2250,2250,2250,29500,29500,Matched,No discrepancy
+
+SECTION 2: ANOMALIES
+Anomaly Type,Invoice No,Vendor Name,Description,Financial Impact (INR)
+Duplicate Entry,INV-1001,Sharma Enterprises,Invoice entered twice in Purchase Register with identical values; only one copy exists in 2B,18000 (potential double ITC claim - reverse one entry)
+Total Value Mismatch,INV-1002,Kumar Traders,2B Total Invoice Value (59500) does not equal Taxable Value + CGST + SGST (59000); CGST/SGST themselves match,0 (no ITC impact, data error in 2B total field)
+GST Rate Mismatch,INV-1003,Patel Industries,PR books invoice at 12% while 2B reflects 18%,4500 (ITC shortfall if 2B is correct)
+Missing in GSTR-2B,INV-1005,Singh & Co,Invoice present in Purchase Register but not uploaded/filed by vendor in GSTR-1; absent from 2B,36000 (ITC at risk - cannot claim until vendor files)
+Missing in GSTR-2B,INV-1006,Verma Logistics,Invoice present in Purchase Register but not uploaded/filed by vendor in GSTR-1; absent from 2B,1500 (ITC at risk - cannot claim until vendor files)
+GSTIN Mismatch,INV-1008,Reddy Tech Solutions,Vendor GSTIN in PR (36AABCR6789M1Z6) differs from 2B (36AABCR6789M1Z9) in last character; all amounts otherwise match,0 (no value impact, but GST portal auto-matching will fail - needs vendor correction)
+
+SECTION 3: SUMMARY
+Metric,Value
+Total invoices in Purchase Register (incl. duplicate),12
+Unique invoices in Purchase Register,11
+Total invoices in GSTR-2B,9
+Invoices fully matched (no discrepancy),6
+Invoices with mismatches (rate/value/GSTIN),3
+Invoices missing in GSTR-2B,2
+Duplicate entries in Purchase Register,1
+Total ITC as per Purchase Register (unique invoices) (INR),129900
+Total ITC as per GSTR-2B (INR),96900
+Net ITC gap (PR minus 2B) (INR),33000
+ITC at risk due to vendor non-filing (missing in 2B) (INR),37500
+ITC shortfall due to rate mismatch (INV-1003) (INR),4500
+Potential duplicate ITC claim risk (INV-1001) (INR),18000

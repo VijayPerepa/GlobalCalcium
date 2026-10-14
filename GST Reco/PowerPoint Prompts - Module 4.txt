@@ -1,0 +1,13 @@
+o	Tutorial 1
+		Create a 10-slide presentation outline on [Microsoft Fabric] for [Business Users].
+		Include introduction, business benefits, architecture, use cases, challenges and conclusion.
+o	Tutorial 2
+		Create an agenda slide for a 30-minute training on Microsoft Copilot.
+o	Tutorial 3
+		Create a 15-slide training deck on Power BI for beginners.
+		Include learning objectives, demonstrations, exercises and quiz.
+o	Tutorial 4
+		Create an executive presentation on Q3 Sales Performance.
+		Include agenda, key metrics, trends, risks, recommendations and next steps.
+o	Tutorial 5
+		Improve this outline and make it suitable for a 20-minute executive presentation.
