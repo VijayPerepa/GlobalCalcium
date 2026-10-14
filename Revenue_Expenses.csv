@@ -1,0 +1,65 @@
+Month,Revenue,Expenses,Marketing_Spend
+01,54325,29800,5000
+02,56872,31200,5200
+03,59138,31000,5300
+04,58540,32500,5000
+05,63893,33800,5600
+06,65517,34200,6000
+07,67269,34500,6050
+08,69805,34800,6200
+09,70581,35500,6350
+
+Prompts:
+
+1 . analyse following data
+
+2. which quarter performed best and why
+
+3. trend analysis
+
+4. analyse performance indentify points of attnetion possible causes of variance and suggest actions to optimise chsh flow in the coming quarters
+
+
+Prompt Engineering
+
+Role Prompting 
+-   Act as a Senior Financial Analyst. Based on the provided data, analyse performance, identify key areas of concern, possible causes for the variations, and recommend actions to optimise cashflow over      
+    the next quarters. 
+
+    present the results clearly and professionally
+
+-  Quarterwise analysis with numbers
+
+Shot Based prompting (Zero, One, Few-Shot)
+
+Perform a financial analysis and present the results in this format:
+#Analysis
+[...]
+#Points of attention
+[...]
+#Recommendations
+[...]
+#Conclusion
+[answer in a maximum of one paragraph]
+
+
+Chain of Thought Prompt
+
+You are a senior financial analyst. Based on the following quarterly operating cash flow data, think step by step and clearly explain your reasoning to:
+1) Analyze the performance of each quarter and the overall annual trend.
+2) Identify key areas of concern and possible causes for the variations.
+3) Recommend actions to optimize cash flow over the next quarters.
+Data: [[paste the financial data here]]
+
+
+
+
+
+Scenario simulations
+Act as a Financial planning & analysis (FP&A) Analyst . Analyse the csv file containing monthly revenue and expense data. Describe the correlation between marketing spend and total revenue
+create a simple revenue forecast (baseline) for the next three months, assuming marketing investment remains at the same level as the most recent month. Present the forecast in a table
+
+once the reply received 
+add the belwo one
+"based on the projection you created, simulate a new scenario where the marketing budget increases by 10% for the next 3 months and show me the new revenue projection. And then create a excel all where I can change the budget and period my self to see other variations"
+

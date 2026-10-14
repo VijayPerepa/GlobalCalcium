@@ -1,0 +1,14 @@
+Employee_ID,Employee_Name,Date,Time,Vendor,Category,Amount_USD,Purchase_City
+321,Anne Smith,2025-11-12,12:45,Flavor & Art Restaurant,Meals,11.78,New York
+321,Anne Smith,2025-11-13,13:10,Urban Cafe,Meals,8.50,New York
+322,Brian Miller,2025-11-15,19:20,Alpha Gas Station,Fuel,42.00,Jersey City
+323,Carla Mendez,2025-11-16,12:10,Central Hotel,Lodging,96.00,Newark
+323,Carla Mendez,2025-11-16,12:10,Central Hotel,Lodging,96.00,Newark
+324,David Ross,2025-11-17,03:45,24h Diner,Meals,7.00,New York
+325,Alice Taylor,2025-11-18,13:00,OfficePro Store,Office Supplies,19.78,Hoboken
+325,Alice Taylor,2025-11-20,11:40,Ideal Stationery,Office Supplies,17.10,Hoboken
+325,Alice Taylor,2025-11-22,14:20,TechMax,Equipment,2500.00,Hoboken
+326,Philip Nash,2025-11-23,12:30,Tasty Bites Restaurant,Meals,10.40,Stamford
+326,Philip Nash,2025-11-24,12:50,Restaurant,Meals,140.96,Stamford
+
+9811000246
